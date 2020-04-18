@@ -1,12 +1,66 @@
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
 <head>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+<meta name="description" content="" />
+
+<meta name="keywords" content="" />
+
+<meta name="author" content="" />
+
+<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+
+<title>my site</title>
+
+
 <script type="text/javascript">
-    $(document).ready(function(){
-    $("#content").attr("src","https://vnexpress.net");
-})
+
+function updateContent(page){
+    document.getElementById('content').innerHTML = "test";
+}
+
+var countries=new ddajaxtabs("countrytabs", "content")
+countries.setpersist(true)
+countries.setselectedClassTarget("https://vnexpress.net") //"link" or "linkparent"
+countries.init()
+
 </script>
+
+
 </head>
-<body>
-<iframe id="content"></div>
-</body>
+
+	<body>
+<script src="jquery.js"></script>
+		<div id="wrapper">
+			<div id="content">
+				content
+				<hr>
+				test
+				<?php
+					echo "Test";
+				?>
+				
+			</div> <!-- end #content -->
+
+			<div id="sidebar">
+				<div id="fixed">
+										
+						<ul id="countrytabs">
+							<li><a href="#" class="selected" rel="#default">Tab 1</a></li>
+							<li><a href="home.php" rel="content">Tab 2</a></li>
+							<li><a href="about.php" rel="content">Tab 3</a></li>
+						</ul>
+				
+				<br />
+				my shoutbox will go here
+				</div>
+			</div> <!-- end #sidebar -->
+		</div> <!-- End #wrapper -->
+
+	</body>
 </html>
+
