@@ -1,26 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>jQuery Insert HTML inside an iFrame</title>
-<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-<style>
-    textarea, iframe{
-        display: block;
-        margin: 10px 0;
-    }
-</style>
-<script>
-    function updateIframe(){
-        var myFrame = $("#myframe").contents().find('body');
-        var textareaValue = $("textarea").val();
-        myFrame.html(textareaValue);
-    }
-</script>
+<meta charset= "utf-8">
+<title>test page</title>
 </head>
 <body>
-    <textarea rows="5" cols="50" placeholder="Type HTML or text here..."></textarea>
-    <button type="button" onclick="updateIframe()">Insert Content</button>
-    <iframe id="myframe" src="https://vnexpress.net/chieu-nay-khong-ghi-nhan-them-ca-nhiem-ncov-4086740.html" style="position:fixed; top:500px; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;" ></iframe>
+
+<div> 
+<object type="text/html" data="http://validator.w3.org/" width="800px" height="600px" style="overflow:auto;border:5px ridge blue">
+</object></div>
+</div>
+
+
 </body>
 </html>
