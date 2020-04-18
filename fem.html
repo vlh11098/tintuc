@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>jQuery Insert HTML inside an iFrame</title>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<style>
+    textarea, iframe{
+        display: block;
+        margin: 10px 0;
+    }
+</style>
+<script>
+    function updateIframe(){
+        var myFrame = $("#myframe").contents().find('body');
+        var textareaValue = $("textarea").val();
+        myFrame.html(textareaValue);
+    }
+</script>
+</head>
+<body>
+    <textarea rows="5" cols="50" placeholder="Type HTML or text here..."></textarea>
+    <button type="button" onclick="updateIframe()">Insert Content</button>
+    <iframe id="myframe"></iframe>
+</body>
+</html>
